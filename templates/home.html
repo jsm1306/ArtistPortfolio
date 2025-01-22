@@ -17,14 +17,27 @@
              <img src="{{ image.image.url }}" alt="{{ image.title }}">
          </div>
          {% endfor %}
-     </div>
- <h1>hello</h1>
- <h1>hello</h1>
- <h1>hello</h1>
- <h1>hello</h1>
- <h1>hello</h1>
- <h1>hello</h1>
- <h1>hello</h1>
+     </div><div style="display: flex; flex-wrap: wrap; align-items: center; background-color: #000; color: #fff; padding: 30px; font-family: Arial, sans-serif;" class="bio-section">
+        <div style="flex: 1; padding-right: 20px; max-width: 600px;">
+            <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">SEEMA KOHLI</h1>
+            <p style="font-size: 14px; line-height: 1.9; margin-bottom: 20px;">
+                <br>
+               Born in 1960, Seema Kohli has created her own niche in the world of contemporary art since past 35 years. Her creative repertoire is eclectic, encompassing a wide range of mediums ranging from painting, murals, experiential installation performances, films to installations, sculptures and each a unique expression of her style.
+            </p>
+            <p style="font-size: 14px; line-height: 1.9;">
+                She has over time brought a synergy of her unique sensibilities in her art. Kohli's works reveal a claiming of feminine subjectivity and an altered concept of feminine sexuality.            </p>
+            <a href="{% url 'aboutme' %}" style="font-size: 14px; color: #ffcc00; text-decoration: none; margin-top: 10px; display: inline-block;">More</a>
+        </div>
+        <div style="flex: 1; text-align: right;</div>">
+            <img src="{% static 'seemakohli.png' %}" alt="Manuel Lozano" style="width: 350px; height: 350px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);">
+        </div>
+    </div>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    
      <script src="{% static 'scroll.js' %}"></script>
  </body>
  </html>
