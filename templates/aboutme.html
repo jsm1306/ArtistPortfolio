@@ -1,65 +1,35 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+
 {% block content %}
-<div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px">
-  <div style="flex: 1; text-align: justify;">
-    <h1 style="text-align: center;">About Me</h1>
+<div class="about-container">
+  <div class="about-text">
+    <h1>About Me</h1>
     <p>
-      I, Seema Kohli, born in 1960 in New Delhi, am a distinguished Indian
-      contemporary artist, sculptor, and poet. I completed my graduation from
-      Miranda House, Delhi University. Over the past 35 years, I have developed
-      an eclectic artistic repertoire encompassing painting, drawing,
-      printmaking, sculpture, performance, and experiential installations.
+      I, Seema Kohli, born in 1960 in New Delhi, am a distinguished Indian contemporary artist, sculptor, and poet. I completed my graduation from Miranda House, Delhi University. Over the past 35 years, I have developed an eclectic artistic repertoire encompassing painting, drawing, printmaking, sculpture, performance, and experiential installations.
     </p>
     <h5>Artistic Themes and Style</h5>
     <p>
-      My art delves into the metaphysical aspects of existence, exploring cosmic
-      energies responsible for creation. I employ elements from various
-      philosophies and mythologies, emphasizing the cyclical nature of life
-      through birth, death, and rebirth. My vibrant compositions often feature
-      intricate patterns and motifs, reflecting a deep connection to traditional
-      Indian art forms.
+      My art delves into the metaphysical aspects of existence, exploring cosmic energies responsible for creation. I employ elements from various philosophies and mythologies, emphasizing the cyclical nature of life through birth, death, and rebirth. My vibrant compositions often feature intricate patterns and motifs, reflecting a deep connection to traditional Indian art forms.
     </p>
     <h5>Notable Exhibitions and Installations</h5>
     <p>
-      Throughout my career, I have held over 30 solo exhibitions worldwide,
-      including in Venice, Brussels, London, New York, Dubai, Singapore, Delhi,
-      Mumbai, and Hyderabad. My participation in international biennials and art
-      fairs, such as the Venice Biennale, Florence Biennale, and Art Basel, has
-      garnered me global recognition. Significant public installations include a
-      10' x 100' mural at the T3 Delhi International Airport and artworks at the
-      Mumbai International and Domestic Airports.
+      Throughout my career, I have held over 30 solo exhibitions worldwide, including in Venice, Brussels, London, New York, Dubai, Singapore, Delhi, Mumbai, and Hyderabad. My participation in international biennials and art fairs, such as the Venice Biennale, Florence Biennale, and Art Basel, has garnered me global recognition. Significant public installations include a 10' x 100' mural at the T3 Delhi International Airport and artworks at the Mumbai International and Domestic Airports.
     </p>
     <h5>Awards and Recognitions</h5>
-    <p>
-      My contributions to art have been acknowledged with several prestigious
-      awards:
-    </p>
+    <p>My contributions to art have been acknowledged with several prestigious awards:</p>
     <ul>
       <li>2007: Lalit Kala Akademi National Award for Women.</li>
-      <li>
-        2009: Gold Medal at the Florence Biennale for my video work
-        "Swayamsiddha - Myth, Mind, and Movement."
-      </li>
-      <li>
-        2014: Female Empowerment Outstanding Achievement Award by Molecule
-        Communication, Mumbai.
-      </li>
+      <li>2009: Gold Medal at the Florence Biennale for my video work "Swayamsiddha - Myth, Mind, and Movement."</li>
+      <li>2014: Female Empowerment Outstanding Achievement Award by Molecule Communication, Mumbai.</li>
       <li>2017: B.C. Sanyal Award.</li>
     </ul>
-
     <h5>Collections and Legacy</h5>
     <p>
-      My artworks are part of esteemed collections, including the National
-      Gallery of Modern Art in Bangalore, the Melinda and Bill Gates Foundation,
-      the Rubin Museum, the Museum of Sacred Art in Brussels, and the Kochi
-      Museum of Arts. I continue to live and work in New Delhi, contributing to
-      the global art scene with my profound and evocative creations.
+      My artworks are part of esteemed collections, including the National Gallery of Modern Art in Bangalore, the Melinda and Bill Gates Foundation, the Rubin Museum, the Museum of Sacred Art in Brussels, and the Kochi Museum of Arts. I continue to live and work in New Delhi, contributing to the global art scene with my profound and evocative creations.
     </p>
   </div>
-  <img
-    src="/media/gallery/Seema_Kohli.jpg"
-    alt="Seema Kohli"
-    style="width: 200px; height: auto; border-radius: 50%"
-  />
+  <div class="about-image">
+    <img src="/media/gallery/Seema_Kohli.jpg" alt="Seema Kohli" />
+  </div>
 </div>
 {% endblock %}
