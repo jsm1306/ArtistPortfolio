@@ -1,9 +1,10 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 
 def home(request):
-    return render(request,'home.html',{'name':'Sindhu'})
+    gallery = Gallery.objects.all()
+    return render(request, 'home.html', {'gallery': gallery})
 def blog(request):
     return render(request,'blog.html')
 def shop(request):

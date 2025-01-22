@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal overflow, but allow vertical scrolling */
+}
+
+.image-container {
+    background-color: rgba(0, 0, 0, 0.763); /* Semi-transparent background */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive grid */
+    gap: 0px;
+    overflow: hidden; /* Hide overflow content within the image container */
+    padding-top: 10px; /* Push down to leave space for navbar */
+    position: relative; /* Prevent it from moving */
+    height: 300px; /* Fix the height of the container */
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden; /* Ensures the scrolling stays within bounds */
+    height: 300px; /* Height of each box */
+}
+
+.image-box img {
+    width: 100%;
+    position: absolute;
+    animation: scrollImage 10s linear infinite; /* Animate images */
+}
+
+/* Only scroll the images */
+@keyframes scrollImage {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Add padding or margin to the body content to allow scrolling */
+.content {
+    padding: 20px;
+    background: #fff;
+    color: #000;
+}
