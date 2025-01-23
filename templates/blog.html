@@ -1,4 +1,70 @@
 {% extends 'base.html' %}
- {% block content %}
-<h1>Blog</h1>
+{% block content %}
+<h1 style="text-align: center;">My Art Gallery</h1>
+
+<div class="gallery">
+    <div class="item">
+        <img src="/media/gallery/art1.jpg" alt="Art 1" class="art-image">
+        <div class="image-name">Art Title 1</div>
+    </div>
+    <div class="item">
+        <img src="/media/gallery/art2.webp" alt="Art 2" class="art-image">
+        <div class="image-name">Art Title 2</div>
+    </div>
+    <div class="item">
+        <img src="/media/gallery/art3.jpg" alt="Art 3" class="art-image">
+        <div class="image-name">Art Title 3</div>
+    </div>
+</div>
+
 {% endblock %}
+
+<style>
+    /* Gallery container */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* Each gallery item */
+    .item {
+        position: relative;
+        width: 300px;   /* Fixed width */
+        height: 200px;  /* Fixed height */
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    /* Image styling */
+    .art-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the div while keeping the aspect ratio */
+        transition: transform 0.3s ease; /* Zoom-in effect on hover */
+    }
+
+    /* Hover effect for zoom */
+    .item:hover .art-image {
+        transform: scale(1.1); /* Slight zoom on hover */
+    }
+
+    /* Image name styling */
+    .image-name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    }
+
+    /* Show the name when hovering over the item */
+    .item:hover .image-name {
+        opacity: 1; /* Show the text */
+    }
+</style>
