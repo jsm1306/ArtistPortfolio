@@ -2,45 +2,100 @@
 {% load static %}
 {% block content %}
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Artist Portfolio</title>
-     <link rel="stylesheet" href="{% static 'style.css' %}">
- </head>
- <body>
-     <div class="image-container">
-         {% for image in gallery %}
-         <div class="image-box">
-             <img src="{{ image.image.url }}" alt="{{ image.title }}">
-         </div>
-         {% endfor %}
-     </div><div style="display: flex; flex-wrap: wrap; align-items: center; background-color: #000; color: #fff; padding: 30px; font-family: Arial, sans-serif;" class="bio-section">
-        <div style="flex: 1; padding-right: 20px; max-width: 600px;">
-            <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">SEEMA KOHLI</h1>
-            <p style="font-size: 14px; line-height: 1.9; margin-bottom: 20px;">
-                <br>
-               Born in 1960, Seema Kohli has created her own niche in the world of contemporary art since past 35 years. Her creative repertoire is eclectic, encompassing a wide range of mediums ranging from painting, murals, experiential installation performances, films to installations, sculptures and each a unique expression of her style.
-            </p>
-            <p style="font-size: 14px; line-height: 1.9;">
-                She has over time brought a synergy of her unique sensibilities in her art. Kohli's works reveal a claiming of feminine subjectivity and an altered concept of feminine sexuality.            </p>
-            <a href="{% url 'aboutme' %}" style="font-size: 14px; color: #ffcc00; text-decoration: none; margin-top: 10px; display: inline-block;">More</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+        
+        .bio-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: #222;
+            padding: 40px 20px;
+        }
+        .bio-section h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .bio-section p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .bio-section img {
+            width: 350px;
+            height: 350px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .testimonials {
+            background-color: #333;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .testimonial {
+            margin-bottom: 20px;
+        }
+        .testimonial p {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .testimonial span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        {% for image in gallery %}
+        <div class="image-box">
+            <img src="{{ image.image.url }}" alt="{{ image.title }}">
         </div>
-        <div style="flex: 1; text-align: right;</div>">
-            <img src="{% static 'seemakohli.png' %}" alt="Manuel Lozano" style="width: 350px; height: 350px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);">
+        {% endfor %}
+    </div>
+
+    <div class="bio-section">
+        <div style="flex: 1; padding-right: 20px; max-width: 600px;">
+            <h1>SEEMA KOHLI</h1>
+            <p>Born in 1960, Seema Kohli has created her own niche in the world of contemporary art since the past 35 years. Her creative repertoire is eclectic, encompassing a wide range of mediums ranging from painting, murals, experiential installation performances, films to installations, sculptures, and each a unique expression of her style.</p>
+            <p>She has over time brought a synergy of her unique sensibilities in her art. Kohli's works reveal a claiming of feminine subjectivity and an altered concept of feminine sexuality.</p>
+            <a href="{% url 'aboutme' %}" style="color: #ffcc00; text-decoration: none; margin-top: 10px; display: inline-block;">Read More</a>
+        </div>
+        <div style="flex: 1; text-align: right;">
+            <img src="{% static 'seemakohli.png' %}" alt="Seema Kohli">
         </div>
     </div>
-    <h1>Hello</h1>
-    <h1>Hello</h1>
-    <h1>Hello</h1>
-    <h1>Hello</h1>
-    <h1>Hello</h1>
+
+    <div class="testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonial">
+            <p>"Seema's art is a mesmerizing blend of creativity and soul. Every piece tells a story."</p>
+            <span>- Art Critic</span>
+        </div>
+        <div class="testimonial">
+            <p>"Her works beautifully capture the essence of feminine energy and spirituality."</p>
+            <span>- Gallery Owner</span>
+        </div>
+    </div>
     
-     <script src="{% static 'scroll.js' %}"></script>
- </body>
- </html>
- 
+    
+
+    <script src="{% static 'scroll.js' %}"></script>
+</body>
+</html>
+
 {% endblock %}
-<!-- add testimonals in home.html -->
